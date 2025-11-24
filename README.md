@@ -1,152 +1,173 @@
-# Student Result Management System 
-### Data Structures -
-• Hashing • Trees • Sorting
-
+# Student Result Management System  
 ---
 
 ## Overview
 
-The **Student Result Management System (SRMS)** is a data-structure–based academic record system designed to store, manage, and manipulate student information efficiently.  
-This project demonstrates the use of **hash tables**, **binary search trees (BST)**, and a set of **sorting algorithms** to replicate real-world result-processing workflows.
+The **Student Result Management System** is a software solution designed to efficiently manage student academic records, store and retrieve data using hashing and tree-based structures, perform fast roll-number lookups, sort marks and roll numbers using multiple sorting algorithms, and compare their performance.
 
-The purpose of the system is to highlight how different data structures provide speed, efficiency, and organization when managing large sets of student data such as roll numbers, marks, and academic details.
+This assignment focuses on implementing **hashing**, **Binary Search Trees (BST)**, and classical **sorting algorithms** to simulate real-world student data management.
 
 ---
 
 ## Objectives
 
-- Build a structured system to manage student details and marks.  
-- Implement **hashing** for fast roll-number lookups.  
-- Use a **Binary Search Tree** to organize student marks and retrieve sorted output.  
-- Implement classical **sorting algorithms** (Bubble, Selection, Insertion, Merge, Quick).  
-- Allow comparison of algorithm behavior and performance.  
-- Strengthen understanding of tree traversal, collision resolution, and sorting logic.  
-- Apply theoretical DS concepts to practical record-management problems.
+- Design a system to store and manage student academic details.  
+- Implement hashing and tree structures for fast retrieval and search operations.  
+- Enable roll-number–based lookups using hashing for **O(1)** access (average case).  
+- Implement sorting algorithms such as **Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, and Quick Sort**.  
+- Compare the performance and behavior of different sorting algorithms on student marks and roll numbers.  
+- Demonstrate efficient retrieval using trees and hash tables.  
+- Apply theoretical data structure concepts (hashing, trees, sorting) to practical record management scenarios.
 
 ---
 
 ## Data Structures Used
 
-### **1. Hash Table (Linear Probing)**
+### **1. Hash Table**
 Used for:
-- Direct roll-number access  
-- Fast search, insert, and delete operations  
+- Fast roll-number lookups  
+- Direct access to student data  
+- Efficient insert/search/delete operations  
 
-**Why:**  
-Hashing provides average-case **O(1)** access, ideal for frequently accessed student records.
+**Reason:**  
+Hashing provides **O(1)** average-case search time, making it ideal for frequently accessed student records.
 
 ---
 
 ### **2. Binary Search Tree (BST)**
 Used for:
-- Marks-based hierarchical organization  
-- Inorder traversal → Sorted marks list  
-- Range queries and ranked viewing  
+- Sorted storage of roll numbers or marks  
+- Inorder traversal for sorted output  
+- Range queries (e.g., students scoring 70–90)  
 
-**Why:**  
-BST enables efficient ordering with **O(log n)** insertion/search in ideal cases.
+**Reason:**  
+BST offers **logarithmic search time** and naturally maintains sorted structure.
 
 ---
 
 ### **3. Sorting Algorithms**
-The system implements:
+Used for:
+- Sorting marks  
+- Sorting roll numbers  
+- Comparing time complexity and algorithm behaviour  
 
+Algorithms implemented:
 - Bubble Sort  
 - Selection Sort  
 - Insertion Sort  
 - Merge Sort  
 - Quick Sort  
 
-Used to sort:
-- **Marks**  
-- **Roll numbers**
-
-**Why:**  
-Each algorithm demonstrates different complexities, helping compare performance on identical datasets.
+**Reason:**  
+Each sorting algorithm demonstrates different efficiency trade-offs.
 
 ---
 
 ## Functionalities
 
-### **Student Management**
-- Add or update student details  
-- Delete student record  
-- View all stored students  
-- Search by roll number (via hash table)  
-
----
-
-### **Hash Table Operations**
-- Insert student  
-- Search student  
+### **1. Student Record Management**
+- Add student  
+- Update student details  
 - Delete student  
-- Collision handling via linear probing  
+- Display all student records  
+- Search by roll number (via Hash Table)
 
----
+### **2. Hash Table Operations**
+- Insert student record  
+- Search by roll  
+- Delete record  
+- Handle collisions (linear probing / separate chaining)
 
-### **BST Operations**
-- Insert based on marks  
-- Retrieve sorted results using inorder traversal  
+### **3. Tree Operations**
+- Insert nodes (marks or roll)  
+- Inorder / Preorder / Postorder traversal  
+- Search and delete nodes  
+- Generate sorted lists using BST
 
----
-
-### **Sorting Module**
-Sort by:
+### **4. Sorting Module**
+Sort students by:
 - Marks  
 - Roll number  
 
-Available Algorithms:
+Using algorithms:
 - Bubble Sort  
 - Selection Sort  
 - Insertion Sort  
 - Merge Sort  
 - Quick Sort  
 
+Additional features:
+- Compare execution time of sorting algorithms  
+- Display sorted results  
+
 ---
 
 ## Implementation Steps
 
-1. Define the **Student** class with roll, name, course, and marks.  
-2. Implement a **Hash Table** with linear probing for student storage.  
-3. Create a **BST** for marks-based ordering.  
-4. Write functions for **five sorting algorithms**.  
-5. Build a **menu-driven interface** allowing:  
-   - Adding/updating students  
-   - Searching  
-   - Deleting  
-   - BST-based sorted display  
-   - Sorting via chosen algorithm  
-6. Test using multiple student entries and evaluate sorted outputs.  
+### **Step 1 — Define Student Structure**
+Attributes:
+- Roll Number  
+- Name  
+- Course  
+- Marks  
+- Grade (optional)
+
+### **Step 2 — Implement Hash Table**
+- Choose hashing method  
+- Define bucket structure  
+- Implement collision handling (probing or chaining)
+
+### **Step 3 — Implement BST**
+- Define tree node  
+- Insert / search / delete operations  
+- Tree traversal algorithms
+
+### **Step 4 — Implement Sorting Algorithms**
+Write functions for:
+- Bubble Sort  
+- Selection Sort  
+- Insertion Sort  
+- Merge Sort  
+- Quick Sort  
+
+### **Step 5 — Build a Menu-Driven System**
+Main operations:
+- Add student  
+- Search student  
+- Display BST-sorted results  
+- Sort marks or rolls  
+- Compare sorting algorithms  
+
+### **Step 6 — Testing**
+Test with:
+- Random roll numbers  
+- Repeated insertions  
+- Duplicate records  
+- Sorted, unsorted, and reverse-sorted inputs  
 
 ---
 
-## Technologies Used
+## Technologies
 
-- **Python 3.x**  
-- Pure data-structure implementation (no built-in dict or list sorting functions used for DS logic)  
-- Console-based menu system  
+You may use any of the following languages:
+
+- **C/C++** — pointers, manual hash tables, BST  
+- **Java** — custom classes and structures  
+- **Python** — manual hashing + tree implementation (no built-in dict for DS logic)
 
 ---
 
 ## Learning Outcomes
 
-By completing this assignment, students will:
+Students will learn to:
 
-- Understand the internal working of **hash tables** and collision resolution.  
-- Implement and manipulate **Binary Search Trees**.  
-- Apply and compare **sorting algorithms**.  
-- Analyze time and space complexities.  
-- Develop modular, scalable DS-based applications.  
-- Improve problem-solving and algorithmic thinking.  
-
----
-
-## Sample Features Demonstrated
-
-- O(1) hash-based student lookup  
-- O(log n) tree traversal for sorted marks  
-- Sorting algorithm comparison on same dataset  
-- Structured menu-driven execution  
+- Implement hash tables and handle collisions  
+- Build and operate binary search trees  
+- Apply and compare multiple sorting algorithms  
+- Measure and analyze algorithm complexity  
+- Design structured, data-driven software solutions  
+- Understand practical behavior of different algorithms on real-world data  
+- Write clean, modular, menu-driven academic applications  
 
 ---
 
@@ -154,6 +175,7 @@ By completing this assignment, students will:
 
 **Name:** Aditya Chouhan  
 **Roll No:** 2401830001  
-**Course:** B.Sc. (H) Cybersecurity  
+**Course:** B.Sc (H) Cybersecurity  
 
 ---
+
